@@ -81,12 +81,13 @@
 /* Tables: modern data presentation */
 .main-content table {
   border-collapse: collapse !important;
-  width: 100% !important;
-  margin: 2em 0 !important;
+  width: auto !important;  /* Fit content, not 100% width */
+  margin: 2em auto !important;  /* Center horizontally with auto margins */
   font-size: 0.95em !important;
   box-shadow: 0 3px 10px var(--shadow-color) !important;
   border-radius: 8px !important;
   overflow: hidden !important;
+  display: table !important;  /* Ensure proper table layout */
 }
 
 .main-content thead tr {
