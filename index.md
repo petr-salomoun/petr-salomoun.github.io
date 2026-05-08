@@ -29,7 +29,7 @@ Making sense of the world through data.
 <p style="margin-top: 1.5em;">
   <a href="{{ post.url }}" style="background: #159957; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; display: inline-block; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: all 0.2s ease;">Read Full Analysis →</a>
   {% if post.github_repo %}
-  <a href="https://github.com/{{ post.github_repo }}" target="_blank" style="margin-left: 1em; color: #155799; text-decoration: none; display: inline-block; padding: 10px 20px; border: 2px solid #155799; border-radius: 6px; font-weight: 600; transition: all 0.2s ease;">📊 View Data & Code</a>
+  <a href="https://github.com/{{ post.github_repo }}" target="_blank" style="margin-left: 1em; color: #155799; background: white; text-decoration: none; display: inline-block; padding: 10px 20px; border: 2px solid #155799; border-radius: 6px; font-weight: 600; transition: all 0.2s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📊 View Data & Code</a>
   {% endif %}
 </p>
 
