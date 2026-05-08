@@ -1,29 +1,56 @@
 # Blog Configuration
-title: "Data Science Projects by Petr Salomoun"
-description: "Popular science reports from my data science analyses"
+title: "Data Science Explorations"
+tagline: "Uncovering patterns in infrastructure, geology, and society through data"
+description: "In-depth data science analyses exploring real-world datasets: bridge safety, mineral exploration, crime patterns, and more."
 author: "Petr Salomoun"
 email: "petr.salomoun@gmail.com"
+url: "https://petr-salomoun.github.io"
+baseurl: ""
 
-# GitHub Pages settings
-theme: minima
+# GitHub Pages settings - Using Just the Docs theme
+remote_theme: just-the-docs/just-the-docs
+color_scheme: custom
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
 
 # Blog settings
 permalink: /:year/:month/:day/:title/
 show_excerpts: true
 
-# Navigation
-header_pages:
-  - index.md
-  - about.md
+# Just the Docs configuration
+search_enabled: true
+heading_anchors: true
+
+# Navigation structure
+nav_enabled: true
+nav_sort: case_insensitive
+
+# Footer content
+footer_content: "Data Science Projects by Petr Salomoun | All content CC BY 4.0 unless otherwise noted"
+
+# Social links
+gh_edit_link: false
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/petr-salomoun/petr-salomoun.github.io"
+gh_edit_branch: "main"
 
 # Build settings
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Collections for organizing posts
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/
 
 # Exclude from build
 exclude:
@@ -31,3 +58,5 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - blog_config.yaml
+  - PUBLICATION_SUMMARY.md
