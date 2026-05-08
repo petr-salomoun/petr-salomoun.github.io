@@ -359,6 +359,17 @@
   border-radius: 4px !important;
 }
 
+/* Center tables when zoomed */
+.image-zoom-overlay table {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  max-width: 95%;
+  max-height: 95%;
+  overflow: auto;
+}
+
 .image-zoom-overlay.active {
   display: block;
 }
