@@ -13,7 +13,8 @@
     
     <!-- Google Analytics -->
     {% if site.google_analytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}" 
+            onerror="console.error('Analytics: Failed to load gtag.js from Google')"></script>
     <script>
       console.log('Analytics: Initializing with ID: {{ site.google_analytics }}');
       window.dataLayer = window.dataLayer || [];
@@ -67,9 +68,16 @@
       });
       {% endif %}
       
-      // Debug: log dataLayer after 2 seconds
+      // Debug: Check if gtag.js actually loaded
       setTimeout(function() {
         console.log('Analytics: dataLayer contents:', window.dataLayer);
+        console.log('Analytics: gtag.js loaded?', typeof window.gtag_loaded !== 'undefined' ? 'YES' : 'UNKNOWN (may still be loading)');
+        
+        // Warn if script failed to load
+        var gtagScript = document.querySelector('script[src*="googletagmanager.com"]');
+        if (gtagScript && gtagScript.src) {
+          console.log('Analytics: Attempting to load from:', gtagScript.src);
+        }
       }, 2000);
     </script>
     {% else %}
