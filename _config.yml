@@ -7,9 +7,8 @@ email: "petr.salomoun@gmail.com"
 url: "https://petr-salomoun.github.io"
 baseurl: ""
 
-# GitHub Pages settings - Using Just the Docs theme
-remote_theme: just-the-docs/just-the-docs
-color_scheme: custom
+# GitHub Pages settings - Using Cayman theme
+remote_theme: pages-themes/cayman@v0.2.0
 
 plugins:
   - jekyll-feed
@@ -17,25 +16,12 @@ plugins:
   - jekyll-remote-theme
 
 # Blog settings
-permalink: /:year/:month/:day/:title/
+permalink: /posts/:year/:month/:day/:title/
 show_excerpts: true
 
-# Just the Docs configuration
-search_enabled: true
-heading_anchors: true
-
-# Navigation structure
-nav_enabled: true
-nav_sort: case_insensitive
-
 # Footer content
-footer_content: "Data Science Projects by Petr Salomoun | All content CC BY 4.0 unless otherwise noted"
-
-# Social links
-gh_edit_link: false
-gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/petr-salomoun/petr-salomoun.github.io"
-gh_edit_branch: "main"
+github:
+  repository_url: https://github.com/petr-salomoun/petr-salomoun.github.io
 
 # Build settings
 markdown: kramdown
@@ -50,7 +36,6 @@ kramdown:
 collections:
   posts:
     output: true
-    permalink: /:collection/:year/:month/:day/:title/
 
 # Exclude from build
 exclude:
@@ -60,3 +45,4 @@ exclude:
   - Gemfile.lock
   - blog_config.yaml
   - PUBLICATION_SUMMARY.md
+  - REDESIGN_SUMMARY.md

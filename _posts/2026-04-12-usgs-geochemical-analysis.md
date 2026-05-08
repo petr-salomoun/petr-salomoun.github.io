@@ -63,10 +63,10 @@ mineralisation upstream.
 Both datasets are publicly available at no cost.  The pipeline downloads them
 automatically.
 
-![NGS sample coverage](images/01_ngs_sample_coverage_us.png)
+![NGS sample coverage](https://raw.githubusercontent.com/petr-salomoun/usgs-geochemical-analysis/main/images/01_ngs_sample_coverage_us.png)
 *67,740 NGS stream-sediment collection sites across the United States.*
 
-![MRDS deposits by development status](images/02_mrds_by_status_conus.png)
+![MRDS deposits by development status](https://raw.githubusercontent.com/petr-salomoun/usgs-geochemical-analysis/main/images/02_mrds_by_status_conus.png)
 *429,205 MRDS mineral deposit records coloured by development status (active, past-producer,
 prospect, occurrence).  Most known deposits in the western US are past-producers; the
 Colorado Plateau and Basin and Range show the densest concentrations.*
@@ -148,7 +148,7 @@ The last two rows are worth pausing on.  Gold itself is measurable in barely 0.2
 
 The dominant signal is antimony — a near-perfect tracer for the Sb–Au epithermal association — followed by arsenic.
 
-![Gold element enrichment](images/09b_enrichment_gold.png)
+![Gold element enrichment](https://raw.githubusercontent.com/petr-salomoun/usgs-geochemical-analysis/main/images/09b_enrichment_gold.png)
 *Log₂(enrichment ratio) for each element near gold deposits vs background.
 Positive values (red) mean elevated near gold; negative (blue) means depleted.
 Antimony (SB) and gold itself (AU) dominate, followed by manganese and arsenic.
@@ -163,7 +163,7 @@ In both cases the composite score explicitly accounts for this: elements that ar
 systematically *lower* near deposits contribute negatively to the score,
 making the combined test more sensitive than looking for high values alone.
 
-![Element enrichment matrix — core (filtered)](images/07b_element_commodity_matrix_core_filtered.png)
+![Element enrichment matrix — core (filtered)](https://raw.githubusercontent.com/petr-salomoun/usgs-geochemical-analysis/main/images/07b_element_commodity_matrix_core_filtered.png)
 *Enrichment ratios for key element × commodity combinations at the core zone
 (< 1 km).  Red = elevated near deposits; blue = depleted.  Only elements with
 a strong signal (|log₂| > 0.5) for at least one commodity are shown.
@@ -172,7 +172,7 @@ The full matrix (all 38+ elements × all 28 commodities) is also available as
 `images/07_element_commodity_matrix_core.png`.*
 
 
-![Element enrichment matrix — halo (filtered)](images/08b_element_commodity_matrix_halo_filtered.png)
+![Element enrichment matrix — halo (filtered)](https://raw.githubusercontent.com/petr-salomoun/usgs-geochemical-analysis/main/images/08b_element_commodity_matrix_halo_filtered.png)
 *Same filtered matrix for the halo zone (1–7 km).  The halo signal is generally
 weaker than the core, consistent with chemical dilution with distance from the deposit.
 Cross-commodity patterns — e.g. antimony elevated near both gold and lead deposits —
@@ -221,7 +221,7 @@ score = Σ log(element) for positive-loading elements
 This single number summarises whether the sample's chemistry looks like it is
 sitting on top of a gold deposit, far from one, or somewhere in between.
 
-![Gold PCA loadings](images/10b_pca_loadings_gold.png)
+![Gold PCA loadings](https://raw.githubusercontent.com/petr-salomoun/usgs-geochemical-analysis/main/images/10b_pca_loadings_gold.png)
 *PCx loading for each element in the gold pathfinder suite.  Bar height = loading magnitude;
 direction (positive/negative) = whether the element drives the composite score up or down.
 CR, TL, TE, AU top the positive side; BI and AG are the main negative loaders.*
@@ -238,7 +238,7 @@ published research on which elements co-mobilise with each commodity — this
 domain knowledge acts as a feature filter that makes the model both more
 accurate and more interpretable.
 
-![PCA formula heatmap](images/10_pca_formula_heatmap.png)
+![PCA formula heatmap](https://raw.githubusercontent.com/petr-salomoun/usgs-geochemical-analysis/main/images/10_pca_formula_heatmap.png)
 *PC1 loading values for each element × commodity combination.  Red cells
 (positive loading) indicate the element drives the composite score up near
 deposits; blue cells (negative loading) drive it down.*
@@ -258,16 +258,16 @@ A sample is flagged as a **PCA anomaly** when its composite score is substantial
 
 | PC1 — deposit signal | PC2 — regional background |
 |---|---|
-| ![Gold PCA — PC1](images/13_pca_heatmap_gold.png) | ![Gold PCA — PC2](images/13b_pca_heatmap_gold_pc2.png) |
+| ![Gold PCA — PC1](https://raw.githubusercontent.com/petr-salomoun/usgs-geochemical-analysis/main/images/13_pca_heatmap_gold.png) | ![Gold PCA — PC2](https://raw.githubusercontent.com/petr-salomoun/usgs-geochemical-analysis/main/images/13b_pca_heatmap_gold_pc2.png) |
 | *PC1 score: concentrates in Nevada, the Black Hills (SD) — the major US gold provinces.* | *PC2 score: captures a different dimension — regional geology rather than deposit proximity.  The two maps together illustrate that different principal components bring complementary detection signals.* |
 
-![Uranium PCA heatmap](images/15_pca_heatmap_uranium.png)
+![Uranium PCA heatmap](https://raw.githubusercontent.com/petr-salomoun/usgs-geochemical-analysis/main/images/15_pca_heatmap_uranium.png)
 *Uranium PC1 score for comparison.  The Colorado Plateau (Utah/Colorado/Arizona/New
 Mexico) and the Wyoming Powder River Basin light up without any geological
 input to the model — validating that the geochemical signal alone encodes
 spatial information about mineralisation.*
 
-![PCA halo profile for gold](images/17_pca_halo_gold.png)
+![PCA halo profile for gold](https://raw.githubusercontent.com/petr-salomoun/usgs-geochemical-analysis/main/images/17_pca_halo_gold.png)
 *Gold composite score vs distance from nearest gold deposit.  Scores are highest
 inside 1 km, remain elevated through the 3–5 km halo, and return to background
 beyond 7 km.  This dispersal length is consistent with stream transport of
@@ -448,7 +448,7 @@ leads that would require field follow-up to evaluate.
 internet connection is needed once the file is downloaded (unless OpenStreetMap tile layers are required).
 Open it in any modern browser (Chrome, Firefox, Safari, Edge).
 
-![Interactive map of candidates](images/interactive_map.png)
+![Interactive map of candidates](https://raw.githubusercontent.com/petr-salomoun/usgs-geochemical-analysis/main/images/interactive_map.png)
 
 > **Download interactive map:**
 > [interactive_map.html](https://github.com/petr-salomoun/usgs-geochemical-analysis/releases/download/v1.0/interactive_map.html)

@@ -30,7 +30,7 @@ updated_at: '2026-04-25T18:23:45+00:00'
 
 ## Summary
 
-![Severity Distribution](outputs/charts/01_severity_distribution.png)
+![Severity Distribution](https://raw.githubusercontent.com/petr-salomoun/us-bridge-risk-analysis/main/outputs/charts/01_severity_distribution.png)
 
 America has **622,566 publicly inspected highway bridges**. Using federal inspection data and a machine learning model trained on structural age, traffic load, scour vulnerability, design standards, and fracture criticality, we ranked every one by structural risk — and estimated the probability each one fails in the next year.
 
@@ -57,7 +57,7 @@ The NBI makes this risk knowable and public. This analysis makes it ranked, mapp
 
 ## The Risk Score Distribution
 
-![Risk Histogram](outputs/charts/02_risk_score_histogram.png)
+![Risk Histogram](https://raw.githubusercontent.com/petr-salomoun/us-bridge-risk-analysis/main/outputs/charts/02_risk_score_histogram.png)
 
 The composite risk score blends a structurally-weighted engineering index (substructure > superstructure > deck collapse criticality, plus scour interaction and design-load obsolescence) with a gradient boosting ML model. Cross-validation **AUC = 0.909, Average Precision = 0.644**.
 
@@ -66,11 +66,11 @@ The composite risk score blends a structurally-weighted engineering index (subst
 
 ## Bridge Age: The Silent Factor
 
-![Age by Severity](outputs/charts/03_age_by_severity.png)
+![Age by Severity](https://raw.githubusercontent.com/petr-salomoun/us-bridge-risk-analysis/main/outputs/charts/03_age_by_severity.png)
 
 Age is not destiny — many old bridges have been well-maintained — but the statistical pattern is clear: Critical-risk bridges are dramatically older on average. The design life of most mid-20th-century bridges was 50 years. We are now operating many of them at 70 or 80 years with rising traffic loads.
 
-![Decade of Construction](outputs/charts/07_construction_decade.png)
+![Decade of Construction](https://raw.githubusercontent.com/petr-salomoun/us-bridge-risk-analysis/main/outputs/charts/07_construction_decade.png)
 
 The largest cohort of at-risk bridges was built in the 1950s and 1960s, during the Interstate era. These bridges were designed to last 50 years. They are now 60–70 years old.
 
@@ -78,7 +78,7 @@ The largest cohort of at-risk bridges was built in the 1950s and 1960s, during t
 
 ## Condition Ratings
 
-![Condition Distributions](outputs/charts/05_condition_distributions.png)
+![Condition Distributions](https://raw.githubusercontent.com/petr-salomoun/us-bridge-risk-analysis/main/outputs/charts/05_condition_distributions.png)
 
 The NBI rates each bridge component (deck, superstructure, substructure) on a 0–9 scale. Ratings of 4 or below trigger "Poor" classification. This model weights substructure failures more heavily than deck failures, reflecting that foundation/pier collapse causes total structural failure while deck degradation typically leads to closure before collapse.
 
@@ -90,11 +90,11 @@ The NBI rates each bridge component (deck, superstructure, substructure) on a 0�
 
 ## Risk vs. Age and Traffic
 
-![Risk vs Age](outputs/charts/06_risk_vs_age_scatter.png)
+![Risk vs Age](https://raw.githubusercontent.com/petr-salomoun/us-bridge-risk-analysis/main/outputs/charts/06_risk_vs_age_scatter.png)
 
 The mean risk score rises consistently with bridge age (solid black line), but the spread is wide. Many old bridges remain low-risk thanks to good maintenance; conversely, some young bridges already show poor condition. Critical-risk bridges are spread across all ages above ~35 years, with 91.5% being over 50 years old and 70.6% over 70 years old — but there is no single age threshold; condition and structural design are what matter.
 
-![ADT vs Risk](outputs/charts/08_adt_vs_risk.png)
+![ADT vs Risk](https://raw.githubusercontent.com/petr-salomoun/us-bridge-risk-analysis/main/outputs/charts/08_adt_vs_risk.png)
 
 High-traffic bridges thankfully tend to have *lower* risk scores. This reflects that Interstate bridges receive more funding, more frequent inspection, and faster repair. The highest-risk bridges are typically low-volume rural structures that receive minimal maintenance attention.
 
@@ -102,11 +102,11 @@ High-traffic bridges thankfully tend to have *lower* risk scores. This reflects 
 
 ## Which States Have the Most At-Risk Bridges?
 
-![State Risk Ranking](outputs/charts/04_state_risk_ranking.png)
+![State Risk Ranking](https://raw.githubusercontent.com/petr-salomoun/us-bridge-risk-analysis/main/outputs/charts/04_state_risk_ranking.png)
 
 ### CONUS Risk Heatmap
 
-![CONUS Heatmap](outputs/charts/09_conus_state_heatmap.png)
+![CONUS Heatmap](https://raw.githubusercontent.com/petr-salomoun/us-bridge-risk-analysis/main/outputs/charts/09_conus_state_heatmap.png)
 
 The heatmap shows the percentage of Medium+High+Critical risk bridges by state. The Great Plains and Midwest stand out: Iowa, Kansas, and Dakotas have the most deteriorated bridge inventories relative to their size, reflecting decades of underfunded rural bridge maintenance. The Northeast (Massachusetts, Rhode Island, Connecticut) is notable for having large numbers of high-traffic urban bridges approaching end of design life.
 
@@ -171,7 +171,7 @@ These bridges are rated Fair or Good by standard NBI condition codes, meaning th
 
 ### Hidden Risk Heatmap
 
-![Hidden Risk Heatmap](outputs/charts/12_hidden_risk_heatmap.png)
+![Hidden Risk Heatmap](https://raw.githubusercontent.com/petr-salomoun/us-bridge-risk-analysis/main/outputs/charts/12_hidden_risk_heatmap.png)
 
 The left panel shows the raw count of hidden-risk bridges per state; the right panel normalises by state inventory size to reveal where inspection standards appear most relaxed. **Kansas and Nebraska** lead both in absolute count and on a per-inventory basis — Great Plains states where structural vulnerability patterns (age, scour, design-load obsolescence) are widespread yet condition ratings remain Fair or Good. **Puerto Rico** ranks second by percentage (90 bridges, 3.8% of its inventory), and **Pennsylvania** (264 bridges) and **Kentucky** (186 bridges) round out the top five in absolute terms. These are the states where official FHWA condition codes most diverge from our composite model's risk assessment.
 
@@ -194,7 +194,7 @@ P(collapse | 1 year) = 1.3×10⁻⁵ × exp(k × risk_score)
 
 where k = 5.25 is derived from the calibration endpoints.
 
-![Collapse Risk and Occupancy](outputs/charts/10_collapse_risk_occupancy.png)
+![Collapse Risk and Occupancy](https://raw.githubusercontent.com/petr-salomoun/us-bridge-risk-analysis/main/outputs/charts/10_collapse_risk_occupancy.png)
 
 | Tier | Median Annual Collapse P | Range |
 |---|---|---|
@@ -222,7 +222,7 @@ N_persons = (ADT × 0.10) × (bridge_length / speed) × vehicle_occupancy
 - **Speed:** 80 km/h free-flow, 40 km/h on posted/restricted bridges
 - **Expected annual casualties:** P(collapse) × N_persons (rush-hour scenario, conservative upper bound)
 
-![Top Casualty Exposure](outputs/charts/11_top_casualty_exposure.png)
+![Top Casualty Exposure](https://raw.githubusercontent.com/petr-salomoun/us-bridge-risk-analysis/main/outputs/charts/11_top_casualty_exposure.png)
 
 ### Top 10 Bridges by Expected Annual Fatalities
 These bridges show where the real danger concentrates. They are heavily used High or Medium risk bridges: individually their collapse probability in any given year is low, but the enormous number of people on them daily means even a small probability yields meaningful expected harm. The top 10 are all water crossings with long spans, which have higher fatality rates due to drowning risk and rescue challenges.

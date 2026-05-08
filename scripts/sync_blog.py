@@ -184,26 +184,19 @@ class BlogSyncer:
         images = re.findall(img_pattern, content)
         
         for alt_text, img_url in images:
-            # Skip if already a local path
+            original_url = img_url
+            
+            # Convert relative paths to GitHub raw URLs
             if not img_url.startswith(('http://', 'https://')):
-                continue
+                # This is a relative path in the repository
+                img_url = f"https://raw.githubusercontent.com/{gh_repo.full_name}/{gh_repo.default_branch}/{img_url}"
+                print(f"    → Converting relative path to: {img_url}")
             
-            # Download and save image
-            local_path = self._download_image(
-                img_url,
-                gh_repo,
-                project_images_dir,
-                dry_run=dry_run
+            # Replace in content with GitHub raw URL (don't download, just link)
+            content = content.replace(
+                f']({original_url})',
+                f']({img_url})'
             )
-            
-            if local_path:
-                # Convert to relative path from blog root
-                rel_path = local_path.relative_to(self.blog_path)
-                # Replace in content
-                content = content.replace(
-                    f']({img_url})',
-                    f'](/{rel_path})'
-                )
         
         return content
     
