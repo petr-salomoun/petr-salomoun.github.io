@@ -1,0 +1,50 @@
+# Blog Configuration for Automated Sync
+
+# GitHub Pages repository
+blog_repo: "petr-salomoun/petr-salomoun.github.io"
+
+# Project repositories to sync
+projects:
+  - repo: "petr-salomoun/us-bridge-risk-analysis"
+    title: "America's Bridges at Risk: A Data Analysis of 623,000 US Bridges"
+    category: "infrastructure"
+    tags: 
+      - bridges
+      - civil-engineering
+      - machine-learning
+      - risk-analysis
+      - structural-engineering
+    
+  - repo: "petr-salomoun/usgs-geochemical-analysis"
+    title: "Can Stream Water Tell Us Where the Gold Is?"
+    category: "geology"
+    tags:
+      - geochemistry
+      - mining
+      - PCA
+      - machine-learning
+      - mineral-exploration
+      - USGS
+    
+  - repo: "petr-salomoun/weather-crime"
+    title: "Weather and Crime: Five Archetypes of How Climate Shapes Urban Violence"
+    category: "criminology"
+    tags:
+      - crime
+      - weather
+      - data-science
+      - urban-analytics
+      - statistical-analysis
+
+# Image processing settings
+image_max_width: 1200  # Resize images wider than this
+image_quality: 85      # JPEG quality (1-100)
+
+# Git commit settings
+author_name: "Petr Salomoun"
+author_email: "petr.salomoun@gmail.com"
+
+# Blog metadata (for templates)
+blog_title: "Data Science Projects by Petr Salomoun"
+blog_description: "Popular science reports from data science analyses"
+blog_url: "https://petr-salomoun.github.io"
