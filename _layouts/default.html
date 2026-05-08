@@ -15,6 +15,7 @@
     {% if site.google_analytics %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
+      console.log('Analytics: Initializing with ID: {{ site.google_analytics }}');
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -23,6 +24,7 @@
         'anonymize_ip': true,
         'cookie_flags': 'SameSite=None;Secure'
       });
+      console.log('Analytics: Config sent');
       
       // Track page views
       gtag('event', 'page_view', {
@@ -30,6 +32,7 @@
         'page_location': '{{ page.url | absolute_url }}',
         'page_path': '{{ page.url }}'
       });
+      console.log('Analytics: page_view event sent for {{ page.title }}');
       
       {% if page.layout == 'post' %}
       // Track blog post reads
@@ -38,6 +41,7 @@
         'event_label': '{{ page.title }}',
         'value': 1
       });
+      console.log('Analytics: post_read event sent');
       
       // Track reading progress
       var scrollDepth = 0;
@@ -57,10 +61,20 @@
               'event_label': '{{ page.title }}',
               'value': milestone
             });
+            console.log('Analytics: scroll_depth event sent at ' + milestone + '%');
           }
         });
       });
       {% endif %}
+      
+      // Debug: log dataLayer after 2 seconds
+      setTimeout(function() {
+        console.log('Analytics: dataLayer contents:', window.dataLayer);
+      }, 2000);
+    </script>
+    {% else %}
+    <script>
+      console.log('Analytics: NOT ENABLED - site.google_analytics is not set');
     </script>
     {% endif %}
   </head>
