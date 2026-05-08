@@ -1,19 +1,13 @@
 ---
 layout: default
 title: About
-nav_order: 2
 description: "About this data science blog and its methodology"
 permalink: /about/
 ---
 
 # About This Blog
-{: .no_toc }
 
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
+[Home](/) | **About** | [GitHub](https://github.com/petr-salomoun)
 
 ---
 
