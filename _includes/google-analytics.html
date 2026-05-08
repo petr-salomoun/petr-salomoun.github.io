@@ -1,0 +1,52 @@
+<!-- Google Analytics -->
+{% if site.google_analytics %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', '{{ site.google_analytics }}', {
+    'anonymize_ip': true,
+    'cookie_flags': 'SameSite=None;Secure'
+  });
+  
+  // Track page views
+  gtag('event', 'page_view', {
+    'page_title': '{{ page.title }}',
+    'page_location': '{{ page.url | absolute_url }}',
+    'page_path': '{{ page.url }}'
+  });
+  
+  {% if page.layout == 'post' %}
+  // Track blog post reads
+  gtag('event', 'post_read', {
+    'event_category': 'engagement',
+    'event_label': '{{ page.title }}',
+    'value': 1
+  });
+  
+  // Track reading progress
+  var scrollDepth = 0;
+  var milestones = [25, 50, 75, 100];
+  window.addEventListener('scroll', function() {
+    var h = document.documentElement;
+    var b = document.body;
+    var st = 'scrollTop';
+    var sh = 'scrollHeight';
+    var percent = Math.round((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+    
+    milestones.forEach(function(milestone) {
+      if (percent >= milestone && scrollDepth < milestone) {
+        scrollDepth = milestone;
+        gtag('event', 'scroll_depth', {
+          'event_category': 'engagement',
+          'event_label': '{{ page.title }}',
+          'value': milestone
+        });
+      }
+    });
+  });
+  {% endif %}
+</script>
+{% endif %}
