@@ -23,7 +23,7 @@ show_excerpts: true
 # Get your ID from: https://analytics.google.com/
 # It looks like: G-XXXXXXXXXX
 # Uncomment and add your ID to enable tracking:
-# google_analytics: G-XXXXXXXXXX
+google_analytics: G-75QV6XS4MX
 
 # Footer content
 github:
