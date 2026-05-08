@@ -3,8 +3,7 @@ author: Petr Salomoun
 categories:
 - environmental-health
 date: 2026-05-08 14:09:02+00:00
-excerpt: An investigation of 11 years of US toxic pollution data — and what it really
-  reveals about industry, poverty, race, and health ---
+excerpt: 'Eleven years of EPA data on industrial toxic releases shows surprising patterns about which communities bear the pollution burden—and challenges assumptions about environmental justice.'
 github_repo: petr-salomoun/tri-pollution-health-effect
 layout: post
 tags:

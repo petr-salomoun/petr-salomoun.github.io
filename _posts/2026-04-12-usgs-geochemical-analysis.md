@@ -3,8 +3,7 @@ author: Petr Salomoun
 categories:
 - geology
 date: 2026-04-12 22:43:25+00:00
-excerpt: '> Sixty thousand scoops of river mud, half a million deposit records, and
-  > a few hundred lines of Python in search for gold. ---'
+excerpt: 'Sixty thousand samples of river sediment analyzed with machine learning to predict where undiscovered mineral deposits hide beneath America's surface.'
 github_repo: petr-salomoun/usgs-geochemical-analysis
 layout: post
 tags:

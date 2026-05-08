@@ -3,9 +3,7 @@ author: Petr Salomoun
 categories:
 - infrastructure
 date: 2026-04-25 18:23:45+00:00
-excerpt: 'Data source: Federal Highway Administration — National Bridge Inventory
-  2024 Repository: github.com/petr-salomoun/us-bridge-risk-analysis Bridges analyzed:
-  622,566 Method:...'
+excerpt: 'Using machine learning on 623,000 bridges from federal inspection data, we identify which structures face the highest collapse risk—and why bridge ratings alone don't tell the full story.'
 github_repo: petr-salomoun/us-bridge-risk-analysis
 layout: post
 tags:
