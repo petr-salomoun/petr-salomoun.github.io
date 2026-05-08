@@ -3,7 +3,7 @@ author: Petr Salomoun
 categories:
 - criminology
 date: 2026-04-26 22:32:24+00:00
-excerpt: 'Analyzing 16 million crime reports across five major US cities reveals five distinct patterns of how temperature, precipitation, and seasons drive different types of violence.'
+excerpt: "Analyzing 16 million crime reports across five major US cities reveals five distinct patterns of how temperature, precipitation, and seasons drive different types of violence."
 github_repo: petr-salomoun/weather-crime
 layout: post
 tags:

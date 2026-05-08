@@ -3,7 +3,7 @@ author: Petr Salomoun
 categories:
 - environmental-health
 date: 2026-05-08 14:09:02+00:00
-excerpt: 'Eleven years of EPA data on industrial toxic releases shows surprising patterns about which communities bear the pollution burden—and challenges assumptions about environmental justice.'
+excerpt: "Eleven years of EPA data on industrial toxic releases shows surprising patterns about which communities bear the pollution burden—and challenges assumptions about environmental justice."
 github_repo: petr-salomoun/tri-pollution-health-effect
 layout: post
 tags:

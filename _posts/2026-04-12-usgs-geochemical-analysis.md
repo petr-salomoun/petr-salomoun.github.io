@@ -3,7 +3,7 @@ author: Petr Salomoun
 categories:
 - geology
 date: 2026-04-12 22:43:25+00:00
-excerpt: 'Sixty thousand samples of river sediment analyzed with machine learning to predict where undiscovered mineral deposits hide beneath America's surface.'
+excerpt: "Sixty thousand samples of river sediment analyzed with machine learning to predict where undiscovered mineral deposits hide beneath America's surface."
 github_repo: petr-salomoun/usgs-geochemical-analysis
 layout: post
 tags:
