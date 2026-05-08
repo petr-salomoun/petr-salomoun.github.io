@@ -1,0 +1,33 @@
+# Blog Configuration
+title: "Data Science Projects by Petr Salomoun"
+description: "Popular science reports from my data science analyses"
+author: "Petr Salomoun"
+email: "petr.salomoun@gmail.com"
+
+# GitHub Pages settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Blog settings
+permalink: /:year/:month/:day/:title/
+show_excerpts: true
+
+# Navigation
+header_pages:
+  - index.md
+  - about.md
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Exclude from build
+exclude:
+  - scripts/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
