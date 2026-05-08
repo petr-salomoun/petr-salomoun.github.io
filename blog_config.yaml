@@ -35,6 +35,17 @@ projects:
       - data-science
       - urban-analytics
       - statistical-analysis
+  
+  - repo: "petr-salomoun/tri-pollution-health-effect"
+    title: "Industrial Pollution and Public Health: Analyzing TRI Data"
+    category: "environmental-health"
+    tags:
+      - pollution
+      - public-health
+      - environmental-science
+      - EPA
+      - toxic-release-inventory
+      - data-analysis
 
 # Image processing settings
 image_max_width: 1200  # Resize images wider than this
