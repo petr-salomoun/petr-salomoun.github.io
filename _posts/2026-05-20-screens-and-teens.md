@@ -59,6 +59,8 @@ Everyone blames smartphones for the PISA math score decline. But **math was alre
 
 The inflection at 2012 coincides with both smartphone mass adoption and the rise of Instagram and other social media platforms (launched 2010–2012). PISA's 3-year intervals cannot separate these effects.
 
+![Technology Timeline](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/todo_fixes/fig_instagram_vs_smartphone_timeline.png)
+
 ---
 
 ## Part II: SES — The Elephant in the Room
@@ -81,9 +83,43 @@ The SES quintile gap is **94 math points** — from poorest to richest. The larg
 
 A small group of students (2.6%) reports zero use of ALL leisure screen activities. These are severely deprived — mean SES of −0.87, scoring 90 points below peers. Their inclusion in "zero screen use" groups conflates deprivation with choice. **All dose analyses use access-only students** (N = 61,055).
 
+### Cultural Clusters Beyond SES
+
+East Asian countries score 90 points above what their SES predicts; Latin American countries score 22 below — reflecting educational system quality and cultural factors that SES cannot capture.
+
+![SES by Region](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/round4/fig_ses_by_region.png)
+
+### Screen Harm Scales with Wealth
+
+The opportunity cost of screen time is higher for wealthy students. For Q1 students, gaming shows a *positive* effect (+0.18) and SM is neutral. For Q4, every activity is negative, with video (−0.24) and SM (−0.16) hitting hardest. This pattern is consistent across Math, Reading, and Science.
+
+![Q1 vs Q4 Effects](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/round9/fig_q1_vs_q4.png)
+
+### Activity Usage by Sex × SES
+
+Sex drives activity choice more than SES does. Boys game more across all SES levels (Δ ≈ 0.5–0.7 hrs/day), while girls use more social media and video. SES differences within sex are small (Δ < 0.2 hrs/day), and cross-country variation is modest, suggesting these patterns are universal.
+
+![Screen Activity Usage by Sex × SES](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/round9/fig_usage_sex_ses.png)
+
+Here is how screen activity types correlate with PISA results separately for sexes after adjusting for SES:
+
+![Activity Effects by Sex](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/round9/fig_effects_by_sex.png)
+
+*SES-adjusted standardized effects (β) of each activity on outcomes, separately for males and females. Green = positive effect, Red = negative effect.*
+
 ---
 
-## Part III: Every Activity Has an Optimal Dose
+## Part III: The Paradox — Does Studying Make You Stupid?
+
+Raw data show students who spend more time on homework score *worse*. Email (β=−0.25) and News (β=−0.22) show similar patterns. The resolution: **Email and Homework** correlate at r=0.63 and capture the same thing — struggling students doing more schoolwork (reverse causation). **Both are excluded from further leisure analysis.**
+
+![Homework Paradox](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/confounder_revision/fig3_homework_paradox.png)
+
+**News is different** — it retains a strong independent effect (β=−0.154) even after controlling for all other activities. It represents genuine harmful leisure consumption, not reverse causation.
+
+---
+
+## Part IV: Every Activity Has an Optimal Dose
 
 Across all five leisure screen activities, we find dose-response curves ranging from inverted-U (clear optimum at moderate use) to monotonically declining (optimum at zero). The optimal dose varies dramatically by **sex** and **SES**.
 
@@ -106,9 +142,51 @@ Across all five leisure screen activities, we find dose-response curves ranging 
 
 The pattern is consistent: **the optimum shifts left (toward less use) for wealthier students.** A uniform screen time cap at low levels helps rich students but **hurts poor ones** — poor students' optima are at 1–2h or 2–4h depending on activity.
 
+### Why Zero Screen Time Helps Rich and Hurts Poor Students?
+
+Rich students' screen time displaces beneficial activities (reading, enrichment) — higher opportunity cost. Poor students have less to displace. Gaming provides cognitive benefits (spatial reasoning), SM reduces social exclusion. Video and news have no compensatory benefit.
+
+![Displacement Hypothesis](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/round9/fig_displacement.png)
+
+| Activity | Q1 Zero-Use Penalty | Q4 Zero-Use Penalty |
+|----------|---------------------|---------------------|
+| **Gaming** | **−63 pts** | −5 pts |
+| **SM** | **−20 pts** | 0 pts |
+| **Browsing** | **−25 pts** | −7 pts |
+| **Video** | 0 pts | 0 pts |
+| **News** | 0 pts | 0 pts |
+
+### Beyond Academics — Wellbeing and Belonging Optima Diverge
+
+**What's best for grades is not always what's best for happiness or social belonging.** Girls are less affected academically but disproportionately harmed in wellbeing.
+
+![Dose-Response by Sex × SES (5 Activities × 3 Outcomes)](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/round9/fig_dose_response_sex_ses.png)
+
+| Activity | Academic Optimum | Life Satisfaction Optimum | Belonging Optimum | Aligned? |
+|----------|-----------------|--------------------------|-------------------|----------|
+| **Gaming** | 2–4h | 30–60m | Never/<30m | NO |
+| **Social Media** | 1–2h | 30–60m | 2–4h | NO |
+| **Video** | Never/<30m | 30–60m | 1–2h | NO |
+| **Browsing** | 1–2h | 30–60m | 30–60m | Partial |
+
+The most striking divergence: SM's academic optimum is low use, but belonging optimum is moderate-to-high. SM serves a real social function even as it hurts grades.
+
+### Optimal Activity Combination by Subgroup
+
+Activities interact — the optimal level of one depends on others. A grid search across 625 combinations finds:
+
+| Group | Gaming | Social Media | Browsing | Video |
+|-------|--------|--------------|----------|-------|
+| **Poor Boys** | **2–4h** | 1–2h | 1–2h | 30–60m |
+| **Rich Boys** | 1–2h | 1–2h | 30–60m | **Never** |
+| **Poor Girls** | 2–4h | 1–2h | 1–2h | 1–2h |
+| **Rich Girls** | **Never** | 1–2h | 1–2h | 30–60m |
+
+SM at 1–2h is the only universal optimum across all subgroups. Video is the clearest "reduce" signal.
+
 ---
 
-## Part IV: Gaming — The Most Beneficial
+## Part V: Gaming — The Most Beneficial
 
 Gaming shows the clearest positive effect for most groups, stronger for boys, and far more beneficial for poor than rich students.
 
@@ -122,6 +200,12 @@ Gaming shows the clearest positive effect for most groups, stronger for boys, an
 
 For poor boys, **not gaming at all** is more harmful than heavy gaming (−63 vs −8 points). The widest subgroup divergence of any activity.
 
+### Gaming Subgroup Profiles
+
+- **Male non-gamers** (N~1,079 in Q1): Lowest SES (−0.23), lowest Math (389), highest video consumption — toxic activity mix: deprived of beneficial activity, compensating with the most harmful
+- **Male heavy gamers** (4h+): Lower SES than moderate gamers, higher SM and video use — heavy gaming is part of a general high-consumption pattern
+- **Female non-gamers** dominate (74% of non-gamers are female) — gender preference or social stigma, not access limitation
+
 ### The Gaming Stigma Effect on Girls
 
 Gaming improves girls' academics but consistently hurts their belonging and life satisfaction — a pattern consistent with social stigma rather than the activity itself being harmful.
@@ -132,7 +216,7 @@ Rich girls who game at moderate levels lose **0.23 belonging points** while gain
 
 ---
 
-## Part V: Video and News — The Clearest Harms
+## Part VI: Video and News — The Clearest Harms
 
 ### Video Is 1.8× More Harmful Than Social Media
 
@@ -159,9 +243,11 @@ News is **universally harmful** with no beneficial dose for any subgroup. The op
 
 Among 15-year-olds, "reading the news" means scrolling algorithmically-curated content feeds. Despite being the least-consumed activity (60% never or rarely use it), News has the strongest negative effect of any screen activity. Heavy news consumers are not information seekers — they are general over-consumers of everything, a profile suggesting compulsive scrolling behavior.
 
+![News Dose Response](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/round9/fig_news_dose_response.png)
+
 ---
 
-## Part VI: Social Media — Boys vs Girls
+## Part VII: Social Media — Boys vs Girls
 
 SM's effect is not a single number. It varies dramatically by both sex and SES:
 
@@ -186,7 +272,7 @@ Key patterns:
 
 ---
 
-## Part VII: Mental Health — YRBSS Data
+## Part VIII: Mental Health — YRBSS Data
 
 For health outcomes, we turn to the YRBSS 2023 (N=15,203 US high school students). Every health outcome worsens with SM frequency:
 
@@ -200,6 +286,18 @@ For health outcomes, we turn to the YRBSS 2023 (N=15,203 US high school students
 
 ![YRBSS Health Outcomes](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/round9/fig_yrbss_health_outcomes.png)
 
+### Girls Are Hit Harder
+
+![Sex Differences in SM Health Effects](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/round9/fig_yrbss_sex_differences.png)
+
+| Outcome | Boys (None→Constant) | Girls (None→Constant) |
+|---------|----------------------|-----------------------|
+| Poor mental health | 11% → 18% | 21% → 35% |
+| Considered suicide | 13% → 17% | 29% → 31% |
+| Cyberbullied | 23% → 29% | 45% → 61% |
+
+Girls have higher baselines and steeper gradients. 61% of girls using SM constantly report being cyberbullied vs 29% of boys.
+
 ### The Vulnerability Multiplier
 
 SM's mental health effect is almost entirely concentrated among already-vulnerable youth:
@@ -212,9 +310,11 @@ SM's mental health effect is almost entirely concentrated among already-vulnerab
 
 For healthy students (0 ACEs), SM barely matters (+3pp). For traumatized students (2+ ACEs), SM amplifies vulnerability by +17pp. **SM amplifies pre-existing vulnerabilities rather than causing problems in healthy teens.**
 
+![SM × Adverse Childhood Experiences](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/round9/fig_yrbss_ace_interaction.png)
+
 ---
 
-## Part VIII: Cyberbullying — The Real Hit
+## Part IX: Cyberbullying — The Real Hit
 
 Out of 15,203 US high school students surveyed, **4 in 10 (41%)** reported being cyberbullied. After adjusting for sex, age, LGBQ status, adverse childhood experiences, and sleep:
 
@@ -226,6 +326,8 @@ Out of 15,203 US high school students surveyed, **4 in 10 (41%)** reported being
 **The cyberbullying effect (35 pp difference) is 7× larger than the difference between low and heavy SM use (15 pp).** PAF = 59% — an estimated 59% of all poor mental health cases involve cyberbullying.
 
 Targeting cyberbullying directly would be far more effective than limiting screen time.
+
+![Cyberbullying Impact](https://raw.githubusercontent.com/petr-salomoun/screens-and-teens/main/analysis/figures/todo_fixes/fig_cyberbullying_impact.png)
 
 ---
 
@@ -253,6 +355,49 @@ Targeting cyberbullying directly would be far more effective than limiting scree
 | **Rich Girls** | Browsing > Gaming > SM > Video > News | Video → Browsing | +0.17 |
 
 A poor boy switching 1 hour of passive video to gaming gains the equivalent of **~25 Math points** — without any reduction in total screen time.
+
+---
+
+## Personalized Recommendations
+
+**Universal rules (all subgroups):**
+- **Never allow news scrolling** — universally harmful (β=−0.17), no beneficial dose for any group
+- **Minimize video streaming** — strongest displacement effect, optimal is zero or near-zero for all groups
+- **Prioritize cyberbullying prevention** over any time limit
+
+The recommendations below are *per-activity caps within a total daily budget*:
+
+#### Poor Families with Boys
+**Total ~4h/day: Gaming ≤2–4h | SM ≤1–2h | Browsing ≤1–2h | Video <30min | News: never**
+- Gaming is their strongest positive — zero gaming costs 63 pts
+- If total must be reduced, cut video first
+
+#### Poor Families with Girls
+**Total ~4h/day: Gaming ≤2–4h | SM ≤1–2h | Browsing ≤1–2h | Video <1h | News: never**
+- Gaming helps academics but hurts belonging — tradeoff
+- SM hurts girls' satisfaction even when academic effects are neutral — monitor mood
+
+#### Wealthy Families with Boys
+**Total ~2–3h/day: Gaming ≤1–2h | SM ≤1–2h | Browsing ≤30–60min | Video: none | News: never**
+- Eliminate video — rich boys score best with zero
+- SM at 1–2h balances belonging against academic cost
+
+#### Wealthy Families with Girls
+**Total ~2–3h/day: Gaming: none | SM ≤1–2h | Browsing ≤1–2h | Video <30min | News: never**
+- Most restricted subgroup — but not zero across the board
+- SM at 1–2h still optimal (universal finding)
+- Priority: content quality and cyberbullying prevention over time limits
+
+---
+
+## Limitations
+
+1. **Cross-sectional design** — causation uncertain
+2. **Self-reported screen time** — measurement error
+3. **YRBSS lacks SES control** — mental health findings have caveat
+4. **Activity categories broad** — "gaming" includes many types
+5. **Instagram/smartphone separation impossible** — events clustered 2010–2012
+6. **COVID contaminates 2020+ data** — cannot separate screen effects from pandemic effects
 
 ---
 
