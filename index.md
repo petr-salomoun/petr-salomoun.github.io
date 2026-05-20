@@ -1,6 +1,6 @@
 ---
 layout: default
-title: My World Data View
+title: My Data World View
 description: "Data-driven investigations exploring real-world phenomena"
 ---
 

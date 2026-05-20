@@ -51,7 +51,8 @@ Code is primarily **Python** (pandas, scikit-learn, geopandas, matplotlib, seabo
 
 Projects use public-domain data from:
 
-- **US Federal Government**: FHWA National Bridge Inventory, USGS National Geochemical Survey, USGS Mineral Resources Data System, EPA Toxics Release Inventory, NOAA weather stations
+- **US Federal Government**: FHWA National Bridge Inventory, USGS National Geochemical Survey, USGS Mineral Resources Data System, EPA Toxics Release Inventory, NOAA weather stations, CDC YRBSS (Youth Risk Behavior Surveillance System)
+- **International Research**: OECD PISA (Programme for International Student Assessment, 80 countries)
 - **City Governments**: Open data portals from major US cities (crime records, demographic data)
 - **Research Institutions**: Published geochemical references, epidemiological studies, validated crime taxonomies
 
@@ -61,7 +62,7 @@ All data citations are included in each project's full report.
 
 ## Topics & Scope
 
-Projects span diverse domains—**infrastructure, geology, criminology, environmental health, urban analytics**—unified by a common approach: using data to answer questions that matter. Future analyses will continue exploring different fields where public data can reveal insights about the physical and social world.
+Projects span diverse domains—**infrastructure, geology, criminology, environmental health, urban analytics, education, and youth well-being**—unified by a common approach: using data to answer questions that matter. Future analyses will continue exploring different fields where public data can reveal insights about the physical and social world.
 
 No single domain is privileged. The only criterion is whether rigorous data analysis can produce meaningful findings.
 

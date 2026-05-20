@@ -4,12 +4,57 @@
     <meta charset="UTF-8">
 
 {% seo %}
+    <!-- Open Graph / Twitter Card enhancement -->
+    <meta property="og:site_name" content="{{ site.title }}">
+    {% if page.excerpt %}
+    <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 200 }}">
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 200 }}">
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    {% if site.twitter_username %}
+    <meta name="twitter:site" content="@{{ site.twitter_username }}">
+    {% endif %}
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+    {% if page.layout == 'post' %}
+    <!-- JSON-LD Article structured data for Google rich results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.excerpt | strip_html | strip_newlines | truncate: 200 | jsonify }},
+      "author": {
+        "@type": "Person",
+        "name": {{ page.author | default: site.author | jsonify }},
+        "email": {{ site.email | jsonify }}
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": {{ site.author | jsonify }}
+      },
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.updated_at | default: page.date | date_to_xmlschema }}",
+      "url": {{ page.url | absolute_url | jsonify }},
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": {{ page.url | absolute_url | jsonify }}
+      }
+      {% if page.tags %},
+      "keywords": {{ page.tags | join: ", " | jsonify }}
+      {% endif %}
+    }
+    </script>
+    {% endif %}
     
     <!-- Google Analytics -->
     {% if site.google_analytics %}

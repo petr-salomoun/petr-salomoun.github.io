@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://petr-salomoun.github.io/sitemap.xml
