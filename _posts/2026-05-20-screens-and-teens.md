@@ -24,6 +24,8 @@ updated_at: '2026-05-20T00:00:00+00:00'
 
 **Shall we ban gaming or social media?**
 
+**Contents:** [Executive Summary](#executive-summary) · [Part I: Smartphones Kill Education](#part-i-smartphones-kill-education) · [Part II: SES](#part-ii-ses--the-elephant-in-the-room) · [Part III: Screen Factors](#part-iii-screen-factors-affecting-school-results) · [Part IV: The Paradox](#part-iv-the-paradox) · [Part V: The U-Shape](#part-v-the-u-shape--every-activity-has-an-optimum) · [Part V-b: Beyond Academics](#part-v-b-beyond-academics--optimum-across-all-outcomes) · [Part V-c: Health Effects](#part-v-c-health-effects-beyond-academics) · [Part VI: Video](#part-vi-video--the-clearest-harm) · [Part VI-b: News](#part-vi-b-news--the-most-harmful-and-least-suspected) · [Part VII: Gaming](#part-vii-gaming--the-most-beneficial) · [Part VIII: Social Media](#part-viii-social-media--boys-vs-girls) · [Part IX: Cyberbullying](#part-ix-cyberbullying--the-real-hit) · [Policy Implications](#part-xi-what-this-means) · [Recommendations](#part-xii-personalized-recommendations)
+
 ---
 
 ## Executive Summary
