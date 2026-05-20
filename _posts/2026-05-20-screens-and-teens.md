@@ -4,6 +4,7 @@ categories:
 - education
 - public-health
 date: 2026-05-20 00:00:00+00:00
+description: "PISA data from 690,000 students across 80 countries shows gaming helps poor boys but harms rich girls; video is 1.8x worse than social media; and cyberbullying dwarfs all screen time effects."
 excerpt: "700,000 observations across 80 countries and 20 years reveal that screen time's effect on youth is far more nuanced than the headlines suggest — and that uniform bans could hurt the kids who need help most."
 github_repo: petr-salomoun/screens-and-teens
 layout: post

@@ -50,9 +50,22 @@ layout: default
 
   <footer class="post-footer">
     <hr />
-    <p style="text-align: center; color: #586069; font-size: 0.9em;">
+
+    {% assign related = site.posts | where_exp: "p", "p.url != page.url" | slice: 0, 3 %}
+    {% if related.size > 0 %}
+    <div class="related-posts">
+      <h3>More analyses</h3>
+      <ul>
+        {% for p in related %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a> — {{ p.excerpt | strip_html | truncatewords: 20 }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    <p style="text-align: center; color: #586069; font-size: 0.9em; margin-top: 2em;">
       Found this interesting? Check out <a href="/">more data science projects</a> or 
-      <a href="{{ page.github_repo }}">view the code on GitHub</a>.
+      <a href="https://github.com/{{ page.github_repo }}">view the code on GitHub</a>.
     </p>
   </footer>
 </article>
@@ -123,6 +136,27 @@ layout: default
 .post-content {
   margin-top: 3em;
   margin-bottom: 3em;
+}
+
+.related-posts {
+  margin: 2em 0;
+  padding: 1.5em;
+  background: #f6f8fa;
+  border-radius: 8px;
+  border-left: 4px solid #159957;
+}
+
+.related-posts h3 {
+  margin-top: 0;
+  color: #1a1f36;
+}
+
+.related-posts ul {
+  margin-bottom: 0;
+}
+
+.related-posts li {
+  margin-bottom: 0.5em;
 }
 
 .post-footer {

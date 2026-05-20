@@ -3,6 +3,7 @@ author: Petr Salomoun
 categories:
 - criminology
 date: 2026-04-26 22:32:24+00:00
+description: "16 million crime reports across Chicago, Houston, LA, New York, and Philadelphia reveal five distinct archetypes of how heat, rain, and seasons drive assault, robbery, and violent crime."
 excerpt: "Analyzing 16 million crime reports across five major US cities reveals five distinct patterns of how temperature, precipitation, and seasons drive different types of violence."
 github_repo: petr-salomoun/weather-crime
 layout: post
@@ -12,6 +13,10 @@ tags:
 - data-science
 - urban-analytics
 - statistical-analysis
+- temperature
+- assault
+- Chicago
+- New-York
 title: 'Weather and Crime: Five Archetypes of How Climate Shapes Urban Violence'
 updated_at: '2026-04-26T22:32:24+00:00'
 ---

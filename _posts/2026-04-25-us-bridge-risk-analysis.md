@@ -3,6 +3,7 @@ author: Petr Salomoun
 categories:
 - infrastructure
 date: 2026-04-25 18:23:45+00:00
+description: "Machine learning on 623,000 bridges from the FHWA National Bridge Inventory identifies structurally deficient bridges the official rating misses — and shows age alone is a poor predictor of collapse risk."
 excerpt: "Using machine learning on 623,000 bridges from federal inspection data, we identify which structures face the highest collapse risk—and why bridge ratings alone don't tell the full story."
 github_repo: petr-salomoun/us-bridge-risk-analysis
 layout: post
@@ -12,6 +13,8 @@ tags:
 - machine-learning
 - risk-analysis
 - structural-engineering
+- FHWA
+- infrastructure-safety
 title: 'America''s Bridges at Risk: A Data Analysis of 623,000 US Bridges'
 updated_at: '2026-04-25T18:23:45+00:00'
 ---

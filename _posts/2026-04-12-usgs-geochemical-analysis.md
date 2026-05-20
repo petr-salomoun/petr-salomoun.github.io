@@ -3,6 +3,7 @@ author: Petr Salomoun
 categories:
 - geology
 date: 2026-04-12 22:43:25+00:00
+description: "Machine learning on 60,000 USGS stream-sediment geochemistry samples predicts undiscovered gold, copper, and rare-earth mineral deposit locations across the US with 78% precision."
 excerpt: "Sixty thousand samples of river sediment analyzed with machine learning to predict where undiscovered mineral deposits hide beneath America's surface."
 github_repo: petr-salomoun/usgs-geochemical-analysis
 layout: post
@@ -13,6 +14,9 @@ tags:
 - machine-learning
 - mineral-exploration
 - USGS
+- gold
+- copper
+- rare-earth-elements
 title: Can Stream Water Tell Us Where the Gold Is?
 updated_at: '2026-04-12T22:43:25+00:00'
 ---

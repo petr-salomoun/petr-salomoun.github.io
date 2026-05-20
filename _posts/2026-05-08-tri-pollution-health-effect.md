@@ -3,6 +3,7 @@ author: Petr Salomoun
 categories:
 - environmental-health
 date: 2026-05-08 14:09:02+00:00
+description: "11 years of EPA Toxic Release Inventory data linked to CDC health outcomes reveals that SES explains most of the disease burden attributed to industrial pollution — a confounded story."
 excerpt: "Eleven years of EPA data on industrial toxic releases shows surprising patterns about which communities bear the pollution burden—and challenges assumptions about environmental justice."
 github_repo: petr-salomoun/tri-pollution-health-effect
 layout: post
@@ -13,6 +14,9 @@ tags:
 - EPA
 - toxic-release-inventory
 - data-analysis
+- COPD
+- environmental-justice
+- SES
 title: 'Industrial Pollution and Public Health: Analyzing TRI Data'
 updated_at: '2026-05-08T14:09:02+00:00'
 ---
