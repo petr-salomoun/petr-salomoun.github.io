@@ -7,11 +7,7 @@ email: "petr.salomoun@gmail.com"
 url: "https://petr-salomoun.github.io"
 baseurl: ""
 lang: "en-US"
-twitter_username: ""
 github_username: petr-salomoun
-
-# Open Graph image used when no post image is specified
-og_image: "https://petr-salomoun.github.io/assets/og-default.png"
 
 # GitHub Pages settings - Using Cayman theme
 remote_theme: pages-themes/cayman@v0.2.0
@@ -26,10 +22,7 @@ plugins:
 permalink: /posts/:year/:month/:day/:title/
 show_excerpts: true
 
-# Analytics (add your Google Analytics 4 ID here)
-# Get your ID from: https://analytics.google.com/
-# It looks like: G-XXXXXXXXXX
-# Uncomment and add your ID to enable tracking:
+# Analytics
 google_analytics: G-75QV6XS4MX
 
 # Footer content
@@ -59,41 +52,10 @@ exclude:
   - blog_config.yaml
   - PUBLICATION_SUMMARY.md
   - REDESIGN_SUMMARY.md
-
-# Blog settings
-permalink: /posts/:year/:month/:day/:title/
-show_excerpts: true
-
-# Analytics (add your Google Analytics 4 ID here)
-# Get your ID from: https://analytics.google.com/
-# It looks like: G-XXXXXXXXXX
-# Uncomment and add your ID to enable tracking:
-google_analytics: G-75QV6XS4MX
-
-# Footer content
-github:
-  repository_url: https://github.com/petr-salomoun/petr-salomoun.github.io
-
-# Build settings
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    block:
-      line_numbers: false
-
-# Collections for organizing posts
-collections:
-  posts:
-    output: true
-
-# Exclude from build
-exclude:
-  - scripts/
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - blog_config.yaml
-  - PUBLICATION_SUMMARY.md
-  - REDESIGN_SUMMARY.md
+  - ANALYTICS_DEBUG.md
+  - ANALYTICS_SETUP.md
+  - BLOG_STATUS.md
+  - FINAL_SUMMARY.md
+  - GITHUB_PAGES_EXPLAINED.md
+  - QUICK_START.md
+  - SETUP_INSTRUCTIONS.md
