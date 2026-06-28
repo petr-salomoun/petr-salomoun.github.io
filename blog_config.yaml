@@ -47,6 +47,17 @@ projects:
       - toxic-release-inventory
       - data-analysis
 
+  - repo: "petr-salomoun/birth-rate-decline"
+    title: "Why the World Stopped Having Babies"
+    category: "demography"
+    tags:
+      - fertility
+      - demographics
+      - population-decline
+      - mating
+      - family
+      - policy
+
 # Image processing settings
 image_max_width: 1200  # Resize images wider than this
 image_quality: 85      # JPEG quality (1-100)
