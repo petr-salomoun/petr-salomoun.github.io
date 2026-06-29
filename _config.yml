@@ -21,6 +21,7 @@ plugins:
 # Blog settings
 permalink: /posts/:year/:month/:day/:title/
 show_excerpts: true
+future: true
 
 # Analytics
 google_analytics: G-75QV6XS4MX
